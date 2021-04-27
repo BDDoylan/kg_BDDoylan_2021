@@ -4,6 +4,11 @@
 */
 
 let phoneticNumberStorage = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+let inputArgumentArray = [];
+
+for (let i = 2; i < process.argv.length; ++i) {
+    inputArgumentArray.push(process.argv[i]);
+}
 
 const converter = array => {
     let output = [];
