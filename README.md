@@ -20,7 +20,7 @@ Example: node main.js < int > < int > < int >
 ```sh
 Example: node main.js 3 25 209
 
-Expected Output: Three, TwoFive, TwoZeroNine
+Expected Output: Three,TwoFive,TwoZeroNine
 ```
 ## Author
 **Doylan Mihov**
