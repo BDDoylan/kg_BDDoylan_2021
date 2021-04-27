@@ -11,7 +11,7 @@ for (let i = 2; i < process.argv.length; ++i) {
 }
 
 const converter = array => {
-    let output = [];
+    let convertedArray = [];
     for(let i = 0; i < array.length; ++i){
         let stringOutput = "";
         let numString = array[i].toString();
@@ -19,7 +19,17 @@ const converter = array => {
             let stringNum = Number(numString[j]);
             stringOutput += phoneticNumberStorage[stringNum];
         }
-        output.push(stringOutput);
+        convertedArray.push(stringOutput);
     }
-    return output;
+    return convertedArray;
 }
+
+const printPhoneticArray = convertedArray => {
+    for(let i = 0; i < convertedArray.length-1; ++i){
+        process.stdout.write(convertedArray[i] + ",");
+    }
+    process.stdout.write(convertedArray[convertedArray.length-1]);
+}
+
+let phoneticArray = converter(inputArgumentArray);
+printPhoneticArray(phoneticArray);
